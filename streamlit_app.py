@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Maria-Freitas25 
-streamlit
-/
-example-app-bug-report
-Public
-Code
-Issues
-3
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-example-app-bug-report/streamlit_app.py /
-@blackary
-blackary Don't pass http around, just let the request builder handle it
-Latest commit 0a9fdb9 on 15 Mar
- History
- 2 contributors
-@arnaudmiribel@blackary
-108 lines (87 sloc)  3.06 KB
-   
 import google_auth_httplib2
 import httplib2
 import pandas as pd
@@ -136,16 +106,3 @@ expander = st.expander("See all records")
 with expander:
     st.write(f"Open original [Google Sheet]({GSHEET_URL})")
     st.dataframe(get_data(gsheet_connector))
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
