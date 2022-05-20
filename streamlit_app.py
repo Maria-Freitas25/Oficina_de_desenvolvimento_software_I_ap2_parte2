@@ -32,6 +32,49 @@ with form:
     date = cols[0].date_input("Bug date occurrence:")
     bug_severity = cols[1].slider("Bug severity:", 1, 5, 2)
     submitted = st.form_submit_button(label="Submit")
+@st.experimental_singleton()
+def connect_to_gsheet():
+    # Create a connection object.
+    credentials = service_account.Credentials.from_service_account_info(
+        st.secrets["gcp_service_account"],
+    )
+
+    # Create a new Http() object for every request
+    def build_request(http, *args, **kwargs):
+        new_http = google_auth_httplib2.AuthorizedHttp(
+            credentials, http=httplib2.Http()
+        )
+        return HttpRequest(new_http, *args, **kwargs)
+
+    authorized_http = google_auth_httplib2.AuthorizedHttp(
+        credentials, http=httplib2.Http()
+    )
+    service = build(
+        "sheets",
+        "v4",
+        requestBuilder=build_request,
+        http=authorized_http,
+    )
+    gsheet_connector = service.spreadsheets()
+    return gsheet_connector
+
+
+def get_data(gsheet_connector) -> pd.DataFrame:
+    values = (
+        gsheet_connector.values()
+
+    df = pd.DataFrame(values["values"])
+    df.columns = df.iloc[0]
+    df = df[1:]
+    return df
+
+
+def add_row_to_gsheet(gsheet_connector, row) -> None:
+    gsheet_connector.values().append(
+        spreadsheetId=SPREADSHEET_ID,
+        body=dict(values=row),
+        valueInputOption="USER_ENTERED",
+    ).execute()
 
 
 if submitted:
