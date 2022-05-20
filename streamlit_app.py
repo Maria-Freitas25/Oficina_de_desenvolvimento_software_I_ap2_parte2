@@ -11,16 +11,12 @@ import streamlit as st
 #SHEET_NAME = "Database"'''
 GSHEET_URL = f"https://docs.google.com/spreadsheets/d/1NDKV6vm6R8-8DYeSAbUfQuzgv_4b6jWz8PpL0C3qNxU/edit#gid=0"
 
-st.set_page_config(page_title="Bug report", page_icon="🐞", layout="centered")
+st.set_page_config(page_title="Sistema de recomendação de filme", page_icon="🐞", layout="centered")
 
-st.title("🐞 Bug report!")
-
-st.sidebar.write(
-    f"This app shows how a Streamlit app can interact easily with a [Google Sheet]({GSHEET_URL}) to read or store data."
-)
+st.title("🐞 Sistema de recomendação de filme")
 
 st.sidebar.write(
-    f"[Read more](https://docs.streamlit.io/knowledge-base/tutorials/databases/public-gsheet) about connecting your Streamlit app to Google Sheets."
+    f"Dataset[Google Sheet]({GSHEET_URL})"
 )
 
 form = st.form(key="annotation")
