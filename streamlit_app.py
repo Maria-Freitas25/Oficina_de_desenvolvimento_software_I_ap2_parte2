@@ -1,5 +1,9 @@
 import streamlit as st
-
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+import plotly.express as px
+from PIL import Image
 st.markdown('---')
 st.markdown('# Sobre a Base de Dados')
 st.markdown('''O naufrágio do titanic aconteceu em 15 de abril de 1992 no atlântico norte colidindo com um iceberg.
