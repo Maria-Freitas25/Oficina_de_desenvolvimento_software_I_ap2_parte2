@@ -21,3 +21,8 @@ __*Dicionário dos dados*__
 - cabin (Número da cabine)
 - embarked (Porto de embarcação , C = Cherbourg, Q = Queenstown, S = Southampton)''')
 st.markdown('---')
+
+
+st.markdown('### __Base de dados:  Desastre Titanic__ ')
+st.dataframe(train)
+st.markdown('---')
