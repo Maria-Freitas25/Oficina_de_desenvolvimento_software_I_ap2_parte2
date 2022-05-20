@@ -1,4 +1,5 @@
 import streamlit as st
+import matplotlib.pyplot as plt
 
 st.markdown('---')
 st.markdown('# Sobre a Base de Dados')
