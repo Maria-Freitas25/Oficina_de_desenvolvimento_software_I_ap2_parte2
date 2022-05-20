@@ -62,7 +62,7 @@ def connect_to_gsheet():
 def get_data(gsheet_connector) -> pd.DataFrame:
     values = (
         gsheet_connector.values()
-
+    )
     df = pd.DataFrame(values["values"])
     df.columns = df.iloc[0]
     df = df[1:]
