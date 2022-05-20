@@ -7,5 +7,5 @@ def main ():
   choise = st.side.selectbox('Menu',menu)
   if choice == 'Home':
     st.subheader("Streamlit from Colab")
-  if name == 'main':
+if name == 'main':
     main()
