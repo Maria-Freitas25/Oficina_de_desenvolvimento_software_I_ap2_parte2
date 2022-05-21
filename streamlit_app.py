@@ -9,6 +9,9 @@ import streamlit as st
 #SCOPE = "https://www.googleapis.com/auth/spreadsheets"
 #SPREADSHEET_ID = "1QlPTiVvfRM82snGN6LELpNkOwVI1_Mp9J9xeJe-QoaA"
 #SHEET_NAME = "Database"'''
+# .streamlit/secrets.toml
+
+public_gsheets_url = "https://docs.google.com/spreadsheets/d/xxxxxxx/edit#gid=0"
 GSHEET_URL = f"https://docs.google.com/spreadsheets/d/1NDKV6vm6R8-8DYeSAbUfQuzgv_4b6jWz8PpL0C3qNxU/edit#gid=0"
 @st.experimental_singleton()
 def connect_to_gsheet():
