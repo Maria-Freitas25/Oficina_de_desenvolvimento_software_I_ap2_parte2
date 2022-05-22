@@ -1,4 +1,4 @@
-movieId,title,genres
+movieId,title,genres,images
 1,Toy Story (1995),Adventure|Animation|Children|Comedy|Fantasy
 2,Jumanji (1995),Adventure|Children|Fantasy
 3,Grumpier Old Men (1995),Comedy|Romance
@@ -34,7 +34,7 @@ movieId,title,genres
 34,Babe (1995),Children|Drama
 36,Dead Man Walking (1995),Crime|Drama
 38,It Takes Two (1995),Children|Comedy
-39,Clueless (1995),Comedy|Romance
+39,Clueless (1995),Comedy|Romance,https://br.web.img2.acsta.net/pictures/210/302/21030262_20130822202929893.jpg
 40,"Cry, the Beloved Country (1995)",Drama
 41,Richard III (1995),Drama|War
 42,Dead Presidents (1995),Action|Crime|Drama
